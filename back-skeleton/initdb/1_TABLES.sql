@@ -1,30 +1,45 @@
-create table students
+create table jeu_1
 (
     id SERIAL PRIMARY KEY,
-    first_name TEXT not null,
-    last_name TEXT not null,
-    birthdate date null,
-    major_id int null,
+    option_1 TEXT not null,
+    option_2 TEXT not null,
+    option_3 TEXT not null,
+    reponse TEXT not null,
     image bytea null
 );
 
-create table majors
+create table jeu_2
 (
     id SERIAL PRIMARY KEY,
-    name TEXT not null,
-    description TEXT not null
+    question TEXT not null,
+    option_1 TEXT not null,
+    option_2 TEXT not null,
+    option_3 TEXT not null,
+    reponse TEXT not null
 );
 
-create table courses
+create table jeu_3
 (
     id SERIAL PRIMARY KEY,
-    name TEXT not null,
-    hours int not null
+    question TEXT not null,
+
+    reponse TEXT not null
 );
 
-create table student_course
+create table jeu_4
 (
     id SERIAL PRIMARY KEY,
-    student_id int not null,
-    course_id int not null
+    question TEXT not null,
+    reponse TEXT not null,
+    image bytea null
+);
+
+create table jeu_5
+(
+    id SERIAL PRIMARY KEY,
+    question TEXT not null,
+    option_1 TEXT not null,
+    option_2 TEXT not null,
+    option_3 TEXT not null,
+    reponse TEXT not null
 );

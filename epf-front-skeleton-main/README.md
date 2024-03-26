@@ -1,3 +1,4 @@
+npm start
 # EpfFrontSkeleton
 
 ## Avant de lancer le projet
