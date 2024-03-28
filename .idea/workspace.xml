@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1387b301-f1e3-485a-bdd1-6a0839712806" name="Changes" comment="Création du projet&#10;Les deux squelettes au sain du projet">
-      <change afterPath="$PROJECT_DIR$/back-skeleton/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-skeleton/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/back-skeleton/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-skeleton/initdb/1_TABLES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/back-skeleton/initdb/1_TABLES.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

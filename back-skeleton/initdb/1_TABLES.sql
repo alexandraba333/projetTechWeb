@@ -28,3 +28,4 @@ create table student_course
     student_id int not null,
     course_id int not null
 );
+
