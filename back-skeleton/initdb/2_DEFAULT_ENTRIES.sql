@@ -6,7 +6,7 @@ INSERT INTO public.jeu_1 (id, option_1, option_2, option_3, reponse, image) VALU
 
 INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (1, '_and', 'c', 'qu', 'k', 'quand');
 INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (5, 'bou_in', 'qu', 'k', 'ca', 'bouquin');
-INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (2, '_rmacie', 'fa', 'pha', 'fa', 'pharmacie');
+INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (2, '_rmacie', 'fa', 'pha', 'fe', 'pharmacie');
 INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (4, '_ateau', 'c', 'g', 'k', 'gateau');
 INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (3, 'styl_', 'o', 'au', 'eau', 'stylo');
 
