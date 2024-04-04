@@ -1,14 +1,10 @@
 package com.takima.backskeleton.controllers;
 
-import com.takima.backskeleton.models.Jeu_3;
+import com.takima.backskeleton.DTO.Jeu_3OptionDTO;
+import com.takima.backskeleton.DTO.ReponseDTO;
 import com.takima.backskeleton.services.Jeu_3Service;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RequestMapping("jeu_3")
@@ -17,8 +13,15 @@ import java.util.List;
 public class Jeu_3Controller {
     private final Jeu_3Service jeu_3Service;
 
-    @GetMapping("/questionsw")
-    public List<Jeu_3> getAllCourses() {
-        return jeu_3Service.findAll();
+    @GetMapping("/{index}")
+    public Jeu_3OptionDTO AfficherLaQuestion(@PathVariable Integer index) {
+        Jeu_3OptionDTO jeu2OptionDTO = jeu_3Service.GetQuestion(index);
+        return jeu2OptionDTO;
+    }
+
+    @GetMapping("/reponse")
+    public ReponseDTO VerifierReponse(String OptionChoisi, Integer index) {
+        ReponseDTO Jeu_3ReponseDTO = jeu_3Service.VerifierReponse("pha", 1);
+        return Jeu_3ReponseDTO;
     }
 }

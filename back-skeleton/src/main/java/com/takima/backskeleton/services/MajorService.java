@@ -13,9 +13,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MajorService {
     private final MajorDao majorDao;
+
     public List<Major> findAll() {
         Iterable<Major> it = majorDao.findAll();
-        List <Major> majors = new ArrayList<>();
+        List<Major> majors = new ArrayList<>();
         it.forEach(majors::add);
         return majors;
     }

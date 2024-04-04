@@ -1,13 +1,10 @@
 package com.takima.backskeleton.controllers;
 
 import com.takima.backskeleton.DTO.Jeu_2OptionDTO;
-import com.takima.backskeleton.DTO.Jeu_2ReponseDTO;
-import com.takima.backskeleton.models.Jeu_2;
+import com.takima.backskeleton.DTO.ReponseDTO;
 import com.takima.backskeleton.services.Jeu_2Service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @CrossOrigin
 @RequestMapping("jeu_2")
@@ -23,8 +20,8 @@ public class Jeu_2Controller {
     }
 
     @GetMapping("/reponse")
-    public Jeu_2ReponseDTO VerifierReponse(String OptionChoisi, Integer index) {
-        Jeu_2ReponseDTO Jeu_2ReponseDTO = jeu_2Service.VerifierReponse("pha", 1);
+    public ReponseDTO VerifierReponse(String OptionChoisi, Integer index) {
+        ReponseDTO Jeu_2ReponseDTO = jeu_2Service.VerifierReponse("pha", 1);
         return Jeu_2ReponseDTO;
     }
 }

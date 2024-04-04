@@ -14,9 +14,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class StudentController {
     private final StudentService studentService;
+
     @GetMapping("")
     public List<Student> listStudents(@RequestParam(required = false) Integer majorId, @RequestParam(required = false) Integer courseId) {
-        if (majorId != null && courseId !=null) {
+        if (majorId != null && courseId != null) {
             return studentService.searchByMajorAndCourse(majorId, courseId);
         }
         return studentService.findAll();

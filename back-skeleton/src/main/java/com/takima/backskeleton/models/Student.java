@@ -36,6 +36,7 @@ public class Student {
         this.courses = builder.courses;
         this.major = builder.major;
     }
+
     public Student() {
     }
 
@@ -47,7 +48,7 @@ public class Student {
         private List<Jeu_3> courses;
         private Major major;
 
-        public Builder id (Long id) {
+        public Builder id(Long id) {
             this.id = id;
             return this;
         }
@@ -56,18 +57,22 @@ public class Student {
             this.firstName = firstName;
             return this;
         }
+
         public Builder lastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
+
         public Builder courses(List<Jeu_3> courses) {
             this.courses = courses;
             return this;
         }
+
         public Builder major(Major major) {
             this.major = major;
             return this;
         }
+
         public Builder birthdate(Instant birthdate) {
             this.birthdate = birthdate;
             return this;

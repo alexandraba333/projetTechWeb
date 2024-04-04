@@ -7,6 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 @Builder
-public class Jeu_2ReponseDTO {
+public class ReponseDTO {
     private boolean check;
 }

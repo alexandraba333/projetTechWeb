@@ -1,6 +1,7 @@
 # Your backend API
 
-## Set up 
+## Set up
+
 1. Copie-colle le .env.sample en .env
 2. Fait un `docker-compose up`
 2. Rajoute le pluggin : https://plugins.jetbrains.com/plugin/7861-envfile

@@ -20,9 +20,9 @@ public class StudentService {
 
     public List<Student> findAll() {
         Iterable<Student> it = studentDao.findAll();
-        List <Student> users = new ArrayList<>();
+        List<Student> users = new ArrayList<>();
         it.forEach(users::add);
-        return users ;
+        return users;
     }
 
     public Student getById(Long id) {

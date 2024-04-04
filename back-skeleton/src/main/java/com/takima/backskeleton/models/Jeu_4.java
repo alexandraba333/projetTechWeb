@@ -5,14 +5,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "jeu_3")
+@Table(name = "jeu_4")
 @NoArgsConstructor
 @Getter
-public class Jeu_3 {
+public class Jeu_4 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "reponse")
-    private String reponse;
     private String question;
+    @Column(name = "reponse")
+    private String response;
+    private String image;
 }
