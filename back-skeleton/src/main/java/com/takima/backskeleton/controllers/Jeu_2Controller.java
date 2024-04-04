@@ -1,6 +1,7 @@
 package com.takima.backskeleton.controllers;
 
 import com.takima.backskeleton.DTO.Jeu_2OptionDTO;
+import com.takima.backskeleton.DTO.Jeu_2ReponseDTO;
 import com.takima.backskeleton.models.Jeu_2;
 import com.takima.backskeleton.services.Jeu_2Service;
 import lombok.RequiredArgsConstructor;
@@ -19,5 +20,11 @@ public class Jeu_2Controller {
     public Jeu_2OptionDTO AfficherLaQuestion(@PathVariable Integer index) {
         Jeu_2OptionDTO jeu2OptionDTO = jeu_2Service.GetQuestion(index);
         return jeu2OptionDTO;
+    }
+
+    @GetMapping("/reponse")
+    public Jeu_2ReponseDTO VerifierReponse(String OptionChoisi, Integer index) {
+        Jeu_2ReponseDTO Jeu_2ReponseDTO = jeu_2Service.VerifierReponse("pha", 1);
+        return Jeu_2ReponseDTO;
     }
 }

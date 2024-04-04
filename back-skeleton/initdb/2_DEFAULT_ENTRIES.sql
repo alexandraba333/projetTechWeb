@@ -4,12 +4,11 @@ INSERT INTO public.jeu_1 (id, option_1, option_2, option_3, reponse, image) VALU
 INSERT INTO public.jeu_1 (id, option_1, option_2, option_3, reponse, image) VALUES (4, 'dientot', 'bientot', 'bientau', 'bientot', 'epf-front-skeleton-main/images/bientot.jpg');
 INSERT INTO public.jeu_1 (id, option_1, option_2, option_3, reponse, image) VALUES (5, 'bateau', 'pateau', 'dateau', 'bateau', 'epf-front-skeleton-main/images/bateau.jpg');
 
-INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (1, '_and', 'c', 'qu', 'k', 'quand');
-INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (5, 'bou_in', 'qu', 'k', 'ca', 'bouquin');
-INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (2, '_rmacie', 'fa', 'pha', 'fe', 'pharmacie');
-INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (4, '_ateau', 'c', 'g', 'k', 'gateau');
-INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (3, 'styl_', 'o', 'au', 'eau', 'stylo');
-
+INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (1, '_rmacie', 'fa', 'pha', 'fa', 'pha');
+INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (2, '_and', 'c', 'qu', 'k', 'qu');
+INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (3, 'styl_', 'o', 'au', 'eau', 'o');
+INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (4, '_ateau', 'c', 'g', 'k', 'g');
+INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse) VALUES (5, 'bou_in', 'qu', 'k', 'ca', 'qu');
 
 INSERT INTO public.jeu_3 (id, question, reponse) VALUES (1, 'moi', 'moi');
 INSERT INTO public.jeu_3 (id, question, reponse) VALUES (2, 'tres', 'très');

@@ -18,6 +18,7 @@ public class Jeu_2 {
     private String option2;
     @Column(name="option_3")
     private String option3;
+    @Column(name="reponse")
     private String response;
     private String question;
 }

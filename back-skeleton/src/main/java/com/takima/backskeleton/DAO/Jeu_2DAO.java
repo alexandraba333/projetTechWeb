@@ -10,4 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface Jeu_2DAO extends JpaRepository<Jeu_2, Long> {
     @Query("SELECT new com.takima.backskeleton.DTO.Jeu_2OptionDTO(id,question,option1,option2,option3) FROM Jeu_2 WHERE id = ?1")
     Jeu_2OptionDTO GetQuestion(int index);
+
+    @Query("SELECT response FROM Jeu_2 WHERE id = ?1")
+    String GetReponse(int index);
 }
