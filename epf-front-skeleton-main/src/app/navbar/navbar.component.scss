@@ -3,16 +3,20 @@
 nav {
   height: 80px;
   background: linear-gradient(to right, theme.$common-purple, theme.$common-red);
+  display: flex;
+  justify-content: center;
 
   div {
     height: 100%;
     display: flex;
     align-items: center;
 
+
     img {
       margin-left: 20px;
       height: 60px;
       transition: .3s;
+      justify-content: flex-start;
 
       &:hover {
         transform: scale(1.1);
@@ -24,11 +28,15 @@ nav {
     }
   }
 }
+nav img {
+  margin-right: auto;
+}
 
 .mat-nav-list {
-  margin-left: 50px;
+  margin-right: 50px;
   padding: 0;
   display: flex;
+  justify-content: flex-end;
 }
 
 .mat-list-base .mat-list-item {
