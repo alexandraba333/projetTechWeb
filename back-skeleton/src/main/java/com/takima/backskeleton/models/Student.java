@@ -23,7 +23,7 @@ public class Student {
             name = "student_course",
             joinColumns = @JoinColumn(name = "student_id"),
             inverseJoinColumns = @JoinColumn(name = "course_id"))
-    private List<Course> courses;
+    private List<Jeu_3> courses;
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "major_id")
     private Major major;
@@ -44,7 +44,7 @@ public class Student {
         private String firstName;
         private String lastName;
         private Instant birthdate;
-        private List<Course> courses;
+        private List<Jeu_3> courses;
         private Major major;
 
         public Builder id (Long id) {
@@ -60,7 +60,7 @@ public class Student {
             this.lastName = lastName;
             return this;
         }
-        public Builder courses(List<Course> courses) {
+        public Builder courses(List<Jeu_3> courses) {
             this.courses = courses;
             return this;
         }

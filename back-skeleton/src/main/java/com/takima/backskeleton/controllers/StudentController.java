@@ -1,11 +1,10 @@
 package com.takima.backskeleton.controllers;
 
-import com.takima.backskeleton.DTO.StudentDto;
+import com.takima.backskeleton.DTO.StudentDTO;
 import com.takima.backskeleton.models.Student;
 import com.takima.backskeleton.services.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -34,12 +33,12 @@ public class StudentController {
     }
 
     @PostMapping("")
-    public void addStudent(@RequestBody StudentDto studentDto) {
+    public void addStudent(@RequestBody StudentDTO studentDto) {
         studentService.addStudent(studentDto);
     }
 
     @PostMapping("/{id}")
-    public void updateStudent(@RequestBody StudentDto studentDto, @PathVariable Long id) {
+    public void updateStudent(@RequestBody StudentDTO studentDto, @PathVariable Long id) {
         studentService.updateStudent(studentDto, id);
     }
 }
