@@ -21,15 +21,15 @@ INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse)
 VALUES (5, 'bou_in', 'qu', 'k', 'ca', 'qu');
 
 INSERT INTO public.jeu_3 (id, question, reponse)
-VALUES (1, 'moi', 'moi');
+VALUES (1, 'epf-front-skeleton-main/audio/moi.mp3', 'moi');
 INSERT INTO public.jeu_3 (id, question, reponse)
-VALUES (2, 'tres', 'très');
+VALUES (2, 'epf-front-skeleton-main/audio/tres.mp3', 'très');
 INSERT INTO public.jeu_3 (id, question, reponse)
-VALUES (3, 'quand', 'quand');
+VALUES (3, 'epf-front-skeleton-main/audio/quand.mp3', 'quand');
 INSERT INTO public.jeu_3 (id, question, reponse)
-VALUES (4, 'bouquin', 'bouquin');
+VALUES (4, 'epf-front-skeleton-main/audio/bouquin.mp3', 'bouquin');
 INSERT INTO public.jeu_3 (id, question, reponse)
-VALUES (5, 'typique', 'typique');
+VALUES (5, 'epf-front-skeleton-main/audio/typique.mp3', 'typique');
 
 INSERT INTO public.jeu_5 (id, question, option_1, option_2, option_3, reponse)
 VALUES (1, 'chat', 'eau', 'au', 'o', 'chateau');
