@@ -5,7 +5,7 @@ create table jeu_1
     option_2 TEXT not null,
     option_3 TEXT not null,
     reponse TEXT not null,
-    image bytea null
+    image TEXT null
 );
 
 create table jeu_2
@@ -31,7 +31,7 @@ create table jeu_4
     id SERIAL PRIMARY KEY,
     question TEXT not null,
     reponse TEXT not null,
-    image bytea null
+    image TEXT null
 );
 
 create table jeu_5
