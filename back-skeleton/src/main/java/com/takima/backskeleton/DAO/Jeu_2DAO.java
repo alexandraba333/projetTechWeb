@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface Jeu_2DAO extends JpaRepository<Jeu_2, Long> {
-    @Query("SELECT Jeu_2.question FROM Jeu_2 WHERE id = ?1")
+    @Query("SELECT question FROM Jeu_2 WHERE id = ?1")
     String GetQuestion(int index);
 }
