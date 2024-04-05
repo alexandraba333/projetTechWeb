@@ -20,9 +20,11 @@
       <td>{{ jeu_1.option2 }}</td>
       <td>{{ jeu_1.option3 }}</td>
     </tr>
+    <epf-reponse [nb_jeu]="1" [optionChoisi]="jeu_1.option3" [index]="jeu_1.id" (response)="onResponse($event)" ></epf-reponse>
+    <p *ngIf="response"> {{response.check}}</p>
   </ng-container>
 </table>
-<!--<epf-reponse [nb_jeu]="1" [optionChoisi]="jeu_1.option3" [index]="jeu_1.id" (response)="response" ></epf-reponse>-->
 
 <!--    <epf-reponse [nb_jeu]="1"  [optionChoisi]="jeu_1.option3" [index]="jeu_1.id" (response)="response$"></epf-reponse>-->
-<!--    <p *ngIf="(response$ | async) as response">{{response.check}}</p>-->
+<!--    <p *ngIf="(response$ | async) as res
+ponse">{{response.check}}</p>-->

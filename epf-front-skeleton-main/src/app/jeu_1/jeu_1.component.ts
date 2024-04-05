@@ -12,11 +12,15 @@ import { Jeu_1Service } from "services/jeu_1.service"
 export class Jeu_1Component {
   jeu_1$: Observable<Jeu_1> = this._route.data.pipe(map((data) => data["jeu_1"]))
 
-  protected response$!:Observable<Reponse>;
+  protected response:Reponse | undefined;
   public option : string="";
   public id : number=0;
 
   constructor(private _route: ActivatedRoute) {
-//    this.response$.subscribe();
+  }
+
+  onResponse(event:Reponse){
+    this.response = event;
+    console.log(event)
   }
 }
