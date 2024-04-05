@@ -1,53 +1,218 @@
-:host {
+.main{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-inside: 30px;
   display: flex;
-  align-items: center;
-  margin: 25px;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: initial;
+  flex-direction: row;
+  flex: 1;
+  padding-bottom: 10%;
+  background-color: #FCF5EE;
+}
 
-  .title {
-    text-align: center;
-    font-family: Caveat, sans-serif;
-    font-size: 3.5em;
-    font-weight: 700;
-    margin: 30px 0;
-  }
+h1 {
+  font-family: "Roboto Slab" !important;
+  font-size: 35px;
+}
 
-  p {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1.3em;
-  }
+////////////////////////////////////////////////////////
+///                    LEFT SECTION                  ///
+////////////////////////////////////////////////////////
 
-  .left {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+.leftSection {
+  margin-top: 4%;
+  margin-left: 2%;
+  margin-right: 4%;
+  width: 75%;
+}
 
-    .sun {
-      width: 90px;
-      margin-left: 35px;
-    }
+/// TOP
 
-    .card {
-      border: none;
-      display: flex;
-      align-items: baseline;
+.topSection {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-bottom: 3%;
+  height: 250px;
+  background-color: rgba(199, 72, 72, 0.75);
+  box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.35);
+  background-image: linear-gradient(to bottom, rgba(199, 72, 72, 0.8), rgba(199, 72, 72, 0.4));
 
-      .card-text {
-        font-family: "Dancing Script", sans-serif;
-        font-size: x-large;
-        margin-top: 0
-      }
-    }
-  }
+}
 
-  .right {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+.contentSection > h1 {
+ margin-top: 1%;
+ margin-left: 2%;
+ color: #FCF5EE;
+ text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
 
-    img {
-      width: 80%;
-    }
-  }
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  height: auto  ;
+}
+
+.contentSection > h5, p{
+  margin-left: 3%;
+  color: #FCF5EE;
+}
+
+.buttonSection {
+  align-self: flex-end;
+  margin-right: 3%;
+}
+.mat-raised-button {
+  background-color: #FCF5EE ;
+  width: 200px;
+  font-size: 120%;
+  color: rgba(199, 72, 72, 1) !important; /* Changer la couleur de la police en blanc */
+  box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.35);
+}
+/// Bibliothèque
+
+.mainBibli {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bibliTitle {
+  align-content: center;
+  font-family: "Roboto Slab" !important;
+  margin-left: 1%;
+  width: auto;
+  color: #C74848;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.bibli {
+  margin-left: 1%;
+  margin-right: 1%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.bibli > div {
+  height: 225px;
+  width: 325px;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  margin-top: 3%;
+  background-color: rgba(243, 182, 100, 0.9);
+
+  box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.35);
+
+}
+
+.leftGame {
+  position: relative;
+  width: 50%;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+.gameTitle {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.gameTitle > h1 {
+  margin-top: 10%;
+  align-content: center;
+  justify-content: center;
+  border: #1B0325;
+  color: #C74848;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.25);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom, rgba(243, 182, 100, 0.9), rgba(199, 72, 72, 1));
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.leftGame:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: #FCF5EE;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.leftGame {
+  //margin-right: auto;
+}
+
+.middleGame {
+  position: relative;
+  width: 50%;
+  margin-right: auto;
+  border-radius: 5px;
+
+}
+.middleGame:hover .overlay {
+  height: 100%;
+}
+
+.rightGame {
+  position: relative;
+  width: 50%;
+  border-radius: 5px;
+
+}
+.rightGame:hover .overlay {
+  height: 100%;
+}
+
+
+
+////////////////////////////////////////////////////////
+///                   RIGHT SECTION                  ///
+////////////////////////////////////////////////////////
+
+.rightSection {
+  margin-top: 4%;
+  margin-right: 2%;
+  width: 25%;
+}
+
+.information {
+  display: flex;
+  border-radius: 5px;
+  background-color: rgba(243, 182, 100, 0.9);
+  height: 250px;
+  flex-direction: column;
+  box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.35);
+
+}
+
+.information > h1, h5 {
+  color: rgba(199, 72, 72, 1);
+  margin: 3%;
+}
+
+.information > h1 {
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.25);
 }
