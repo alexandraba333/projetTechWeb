@@ -1,4 +1,4 @@
-.main{
+body{
   margin-left: 5%;
   margin-right: 5%;
   margin-inside: 30px;
@@ -89,6 +89,11 @@ h1 {
   color: #C74848;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
 }
+.bibliTitle a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
 
 .bibli {
   margin-left: 1%;
@@ -99,19 +104,21 @@ h1 {
 }
 
 .bibli > div {
+  height: 225px;
+  width: 325px;
   justify-content: center;
   text-align: center;
   align-content: center;
-  border: 1px black solid;
-  height: 200px;
   margin-top: 3%;
-  width: 30%;
   background-color: rgba(243, 182, 100, 0.9);
+
   box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.35);
+
 }
 
 .leftGame {
   position: relative;
+  width: 50%;
   margin-right: auto;
   border-radius: 5px;
 }
@@ -165,6 +172,7 @@ h1 {
 
 .middleGame {
   position: relative;
+  width: 50%;
   margin-right: auto;
   border-radius: 5px;
 
@@ -175,7 +183,9 @@ h1 {
 
 .rightGame {
   position: relative;
+  width: 50%;
   border-radius: 5px;
+
 }
 .rightGame:hover .overlay {
   height: 100%;
@@ -197,8 +207,7 @@ h1 {
   display: flex;
   border-radius: 5px;
   background-color: rgba(243, 182, 100, 0.9);
-  height: auto;
-  width: auto;
+  height: 250px;
   flex-direction: column;
   box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.35);
 

@@ -1,28 +1,62 @@
-<div class="d-flex align-items-center">
-  <h1>Students</h1>
-  <a mat-raised-button color="primary" routerLink="/student-details/new">New</a>
-</div>
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th scope="col">First Name</th>
-    <th scope="col">Last Name</th>
-    <th scope="col">Birthdate</th>
-    <th scope="col">Major</th>
-    <th scope="col">Delete</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let student of (students$ | async)" routerLink="/student-details/{{student.id}}">
-    <td>{{ student.firstName }}</td>
-    <td>{{ student.lastName }}</td>
-    <td>{{ student.birthdate | date : "dd/MM/yyyy" }}</td>
-    <td>{{ student.major!!.name }}</td>
-    <td>
-      <button mat-icon-button color="warn" (click)="deleteStudent($event, student)">
-        <mat-icon>delete</mat-icon>
-      </button>
-    </td>
-  </tr>
-  </tbody>
-</table>
+<body>
+  <div class="topSection">
+    <div class="topTitle">
+      <h1>Bibliothèque</h1>
+    </div>
+    <div class="blabla">
+      <h5>blablabla</h5>
+    </div>
+  </div>
+
+
+  <div class="subSection">
+
+    <div class="topGames">
+          <div class="jeu1">
+            <div class="gameTitle">
+              <h1>Jeu 1</h1>
+            </div>
+            <div class="overlay">
+              <div class="text">Règles du jeu</div>
+            </div>
+          </div>
+
+          <div class="jeu2">
+            <div class="gameTitle">
+              <h1>Jeu 2</h1>
+            </div>
+            <div class="overlay">
+              <div class="text">Règles du jeu</div>
+            </div>
+          </div>
+
+          <div class="jeu3">
+            <div class="gameTitle">
+              <h1>Jeu 3</h1>
+            </div>
+            <div class="overlay">
+              <div class="text">Règles du jeu</div>
+            </div>
+          </div>
+    </div>
+
+    <div class="bottomGames">
+              <div class="jeu4">
+                      <div class="gameTitle">
+                        <h1>Jeu 4</h1>
+                      </div>
+                      <div class="overlay">
+                        <div class="text">Règles du jeu</div>
+                      </div>
+              </div>
+              <div class="jeu5">
+                      <div class="gameTitle">
+                        <h1>Jeu 5</h1>
+                      </div>
+                      <div class="overlay">
+                        <div class="text">Règles du jeu</div>
+                      </div>
+              </div>
+    </div>
+  </div>
+</body>
