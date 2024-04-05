@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Getter
 public class Jeu_2 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "jeu_2_id_seq")
     private Long id;
     @Column(name = "option_1")
     private String option1;

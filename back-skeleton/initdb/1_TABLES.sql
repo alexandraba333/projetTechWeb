@@ -7,6 +7,7 @@ create table jeu_1
     reponse  TEXT not null,
     image    TEXT null
 );
+ALTER SEQUENCE jeu_1_id_seq RESTART 10000 Increment by 50;
 
 create table jeu_2
 (
@@ -17,6 +18,7 @@ create table jeu_2
     option_3 TEXT not null,
     reponse  TEXT not null
 );
+ALTER SEQUENCE jeu_2_id_seq RESTART 10000 Increment by 50;
 
 create table jeu_3
 (
@@ -25,6 +27,7 @@ create table jeu_3
 
     reponse  TEXT not null
 );
+ALTER SEQUENCE jeu_3_id_seq RESTART 10000 Increment by 50;
 
 create table jeu_4
 (
@@ -33,6 +36,7 @@ create table jeu_4
     reponse  TEXT not null,
     image    TEXT null
 );
+ALTER SEQUENCE jeu_4_id_seq RESTART 10000 Increment by 50;
 
 create table jeu_5
 (
@@ -43,3 +47,4 @@ create table jeu_5
     option_3 TEXT not null,
     reponse  TEXT not null
 );
+ALTER SEQUENCE jeu_5_id_seq RESTART 10000 Increment by 50;
