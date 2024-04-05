@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core"
 import { Observable } from "rxjs"
 import { Jeu_1 } from "models/jeu_1.model"
+import { Reponse } from "models/reponse.model"
 import { HttpClient } from "@angular/common/http"
 
 @Injectable({
@@ -15,5 +16,9 @@ export class Jeu_1Service {
 
   afficherQuestion(id: number): Observable<Jeu_1> {
     return this.http.get<Jeu_1>(this.jeu_1Url + `/${id}`)
+  }
+
+  verifierReponse(reponse: string, id: number) : Observable<Reponse> {
+    return this.http.get<Reponse>(this.jeu_1Url + `/${reponse}` + `/${id}`)
   }
 }

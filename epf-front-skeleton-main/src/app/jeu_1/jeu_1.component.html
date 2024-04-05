@@ -12,12 +12,17 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngIf="(jeu_1$ | async) as jeu_1">
-
-    <td>{{ jeu_1.image }}</td>
-    <td>{{ jeu_1.option1 }}</td>
-    <td>{{ jeu_1.option2 }}</td>
-    <td>{{ jeu_1.option3 }}</td>
-  </tr>
   </tbody>
+  <ng-container *ngIf="(jeu_1$ | async) as jeu_1">
+    <tr>
+      <td>{{ jeu_1.image }}</td>
+      <td>{{ jeu_1.option1 }}</td>
+      <td>{{ jeu_1.option2 }}</td>
+      <td>{{ jeu_1.option3 }}</td>
+    </tr>
+  </ng-container>
 </table>
+<!--<epf-reponse [nb_jeu]="1" [optionChoisi]="jeu_1.option3" [index]="jeu_1.id" (response)="response" ></epf-reponse>-->
+
+<!--    <epf-reponse [nb_jeu]="1"  [optionChoisi]="jeu_1.option3" [index]="jeu_1.id" (response)="response$"></epf-reponse>-->
+<!--    <p *ngIf="(response$ | async) as response">{{response.check}}</p>-->

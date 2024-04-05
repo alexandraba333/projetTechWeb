@@ -1,5 +1,5 @@
 export interface Jeu_1 {
-  id: bigint
+  id: number
   image: string
   option1: string
   option2: string
