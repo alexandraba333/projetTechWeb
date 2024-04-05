@@ -17,7 +17,6 @@ import { MajorStudentsComponent } from "majors/major-students/major-students.com
 import { HttpClientModule } from "@angular/common/http";
 import { FooterComponent } from './footer/footer.component'
 import { MatChipsModule } from "@angular/material/chips"
-import { HttpClientModule } from "@angular/common/http"
 import { Jeu_1Component } from "./jeu_1/jeu_1.component"
 import { ReponseComponent } from "./reponse/reponse.component"
 
