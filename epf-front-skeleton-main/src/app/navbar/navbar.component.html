@@ -1,9 +1,14 @@
 <nav>
   <div>
-    <img src="assets/logo-epf.png" routerLink="">
+    <img src="assets/Logo.png" routerLink="">
+  </div>
+  <div class="navTitle">
     <mat-nav-list>
       <a mat-list-item routerLink="{{link.href}}" routerLinkActive="active"
          *ngFor="let link of links">{{ link.name }}</a>
     </mat-nav-list>
+  </div>
+  <div class="Login">
+    <img src="assets/Login.png" routerLink="">
   </div>
 </nav>

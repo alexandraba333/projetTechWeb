@@ -2,41 +2,58 @@
 
 nav {
   height: 80px;
-  background: linear-gradient(to right, theme.$common-purple, theme.$common-red);
+  background: #F3B664;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  div {
-    height: 100%;
-    display: flex;
-    align-items: center;
+div {
+  height: 100%;
+  display: flex;
+  align-items: center;
 
-    img {
-      margin-left: 20px;
-      height: 60px;
-      transition: .3s;
+  img {
+    margin-left: 5%;
+    height: 90%;
+    transition: .3s;
+    padding-left: 10%;
 
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-
-    .active {
-      text-decoration: underline;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
 
 .mat-nav-list {
-  margin-left: 50px;
-  padding: 0;
   display: flex;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.mat-nav-list a {
+  padding-right: 10%;
+}
+
+.navTitle{
+  margin-left: 55%;
+}
+
+.Login {
+  height: 60%;
+  margin-left: auto;
+  padding-right: 2%;
 }
 
 .mat-list-base .mat-list-item {
   font-size: large;
   color: theme.$white;
   transition: .3s;
-
-  &:hover {
-    transform: scale(1.2);
-  }
 }
+
+.mat-list-base .mat-list-item:hover {
+  transform: scale(1.1);
+  background-color: transparent;
+}
+
+
