@@ -19,9 +19,9 @@ public class Jeu_1Controller {
         return jeu2OptionDTO;
     }
 
-    @GetMapping("/reponse")
-    public ReponseDTO VerifierReponse(String OptionChoisi, Integer index) {
-        ReponseDTO ReponseDTO = jeu_1Service.VerifierReponse("pha", 1);
+    @GetMapping("/{OptionChoisi}/{index}")
+    public ReponseDTO VerifierReponse(@PathVariable String OptionChoisi, @PathVariable Integer index) {
+        ReponseDTO ReponseDTO = jeu_1Service.VerifierReponse(OptionChoisi, index);
         return ReponseDTO;
     }
 }
