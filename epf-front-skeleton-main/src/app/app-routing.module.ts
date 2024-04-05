@@ -3,6 +3,8 @@ import { RouterModule, Routes } from "@angular/router"
 import { HomeComponent } from "home/home.component"
 import { StudentsComponent } from "students/students.component"
 import { StudentsResolver } from "students/students.resolver"
+import { Jeu_1Component } from "jeu_1/jeu_1.component"
+import { Jeu_1Resolver } from "jeu_1/jeu_1.resolver"
 import { StudentDetailsComponent } from "students/student-details/student-details.component"
 import { StudentDetailsResolver } from "students/student-details/student-details.resolver"
 import { MajorsComponent } from "majors/majors.component"
@@ -12,6 +14,13 @@ import { MajorStudentsComponent } from "majors/major-students/major-students.com
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
+  {
+    path: "jeu_1/:id",
+    component: Jeu_1Component,
+    resolve: {
+      jeu_1: Jeu_1Resolver,
+    },
+  },
   {
     path: "students",
     component: StudentsComponent,
