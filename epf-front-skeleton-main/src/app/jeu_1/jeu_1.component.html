@@ -1,30 +1,25 @@
-<div class="d-flex align-items-center">
-  <h1>JEU_1</h1>
+<div class = "main">
+  <div class = "leftSection">
+    <h1><br>Premier jeu : I-Mot<br></h1>
+    <ng-container *ngIf="(jeu_1$ | async) as jeu_1">
+      <img src="{{ jeu_1.image }}" alt="Premier niveau" height=200 width=300>
+      <div><br><br>
+        <button class="button">{{ jeu_1.option1 }}</button>
+        <button class="button">{{ jeu_1.option2 }}</button>
+        <button class="button">{{ jeu_1.option3 }}</button>
+      </div>
+      <epf-reponse [nb_jeu]="1" [optionChoisi]="jeu_1.option3" [index]="jeu_1.id" (response)="onResponse($event)" ></epf-reponse>
+      <p *ngIf="response"> {{response.check}}</p>
+    </ng-container>
+  </div>
+  <div class="rightSection">
+    <div class="regles">
+      <h1>Règles du jeu</h1>
+      <p>Ce jeu a pour objectif d'aider les personnes dyslexiques sur leur difficulté à reconnaître des lettres, des sons.
+        <br><br>Le but du jeu est simple : trouver le morceau manquant du mot dont l'image est affiché !</p>
+    </div>
+    <div class="diff">
+      <h1>Oui</h1>
+    </div>
+  </div>
 </div>
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th scope="col">First Name</th>
-    <th scope="col">Last Name</th>
-    <th scope="col">Birthdate</th>
-    <th scope="col">Major</th>
-    <th scope="col">Delete</th>
-  </tr>
-  </thead>
-  <tbody>
-  </tbody>
-  <ng-container *ngIf="(jeu_1$ | async) as jeu_1">
-    <tr>
-      <td>{{ jeu_1.image }}</td>
-      <td>{{ jeu_1.option1 }}</td>
-      <td>{{ jeu_1.option2 }}</td>
-      <td>{{ jeu_1.option3 }}</td>
-    </tr>
-    <epf-reponse [nb_jeu]="1" [optionChoisi]="jeu_1.option3" [index]="jeu_1.id" (response)="onResponse($event)" ></epf-reponse>
-    <p *ngIf="response"> {{response.check}}</p>
-  </ng-container>
-</table>
-
-<!--    <epf-reponse [nb_jeu]="1"  [optionChoisi]="jeu_1.option3" [index]="jeu_1.id" (response)="response$"></epf-reponse>-->
-<!--    <p *ngIf="(response$ | async) as res
-ponse">{{response.check}}</p>-->
