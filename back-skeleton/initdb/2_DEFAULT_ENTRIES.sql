@@ -1,13 +1,13 @@
 INSERT INTO public.jeu_1 (id, option_1, option_2, option_3, reponse, image)
-VALUES (1, 'barriage', 'nariage', 'mariage', 'mariage', 'epf-front-skeleton-main/assets/mariage.jpg');
+VALUES (1, 'barriage', 'nariage', 'mariage', 'mariage', 'assets/mariage.jpg');
 INSERT INTO public.jeu_1 (id, option_1, option_2, option_3, reponse, image)
-VALUES (2, 'sak', 'sac', 'saque', 'sac', 'epf-front-skeleton-main/assets/sac.jpg');
+VALUES (2, 'sak', 'sac', 'saque', 'sac', 'assets/sac.jpg');
 INSERT INTO public.jeu_1 (id, option_1, option_2, option_3, reponse, image)
-VALUES (3, 'phote', 'faude', 'faute', 'faute', 'epf-front-skeleton-main/assets/faute.png');
+VALUES (3, 'phote', 'faude', 'faute', 'faute', 'assets/faute.png');
 INSERT INTO public.jeu_1 (id, option_1, option_2, option_3, reponse, image)
-VALUES (4, 'dientot', 'bientot', 'bientau', 'bientot', 'epf-front-skeleton-main/assets/bientot.jpg');
+VALUES (4, 'dientot', 'bientot', 'bientau', 'bientot', 'assets/bientot.jpg');
 INSERT INTO public.jeu_1 (id, option_1, option_2, option_3, reponse, image)
-VALUES (5, 'bateau', 'pateau', 'dateau', 'bateau', 'epf-front-skeleton-main/assets/bateau.jpg');
+VALUES (5, 'bateau', 'pateau', 'dateau', 'bateau', 'assets/bateau.jpg');
 
 INSERT INTO public.jeu_2 (id, question, option_1, option_2, option_3, reponse)
 VALUES (1, '_rmacie', 'fa', 'pha', 'fa', 'pha');
@@ -43,16 +43,16 @@ INSERT INTO public.jeu_5 (id, question, option_1, option_2, option_3, reponse)
 VALUES (5, 'informati', 'om', 'on', 'an', 'information');
 
 INSERT INTO public.jeu_4 (id, question, reponse, image)
-VALUES (1, 'seic', 'scie', 'epf-front-skeleton-main/assets/scie.jpg');
+VALUES (1, 'seic', 'scie', 'assets/scie.jpg');
 
 INSERT INTO public.jeu_4 (id, question, reponse, image)
-VALUES (2, 'saecu', 'sceau', 'epf-front-skeleton-main/assets/sceau.jpg');
+VALUES (2, 'saecu', 'sceau', 'assets/sceau.jpg');
 
 INSERT INTO public.jeu_4 (id, question, reponse, image)
-VALUES (3, 'puorde', 'poudre', 'epf-front-skeleton-main/assets/poudre.jpg');
+VALUES (3, 'puorde', 'poudre', 'assets/poudre.jpg');
 
 INSERT INTO public.jeu_4 (id, question, reponse, image)
-VALUES (4, 'fiuelel', 'feuille', 'epf-front-skeleton-main/assets/feuille.jpg');
+VALUES (4, 'fiuelel', 'feuille', 'assets/feuille.jpg');
 
 INSERT INTO public.jeu_4 (id, question, reponse, image)
-VALUES (5, 'poylxohne', 'xylophone', 'epf-front-skeleton-main/assets/xylophone.jpg');
+VALUES (5, 'poylxohne', 'xylophone', 'assets/xylophone.jpg');
