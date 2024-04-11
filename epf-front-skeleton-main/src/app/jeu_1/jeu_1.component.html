@@ -6,28 +6,30 @@
     <div class="gameBody">
       <ng-container *ngIf="(jeu_1$ | async) as jeu_1">
         <div class="gameImage">
-          <img src="{{ jeu_1.image }}" alt="Premier niveau" height=200 width=300>
+          <img src="{{ jeu_1.image }}" alt="Premier niveau">
         </div>
         <div class="gameButtons"><br><br>
-          <button mat-raised-button color="warn" class="mat-raised-button" (click)="onOptionSelected(jeu_1.option1)">{{ jeu_1.option1 }}</button>
-          <button mat-raised-button color="warn" class="mat-raised-button" (click)="onOptionSelected(jeu_1.option2)">{{ jeu_1.option2 }}</button>
-          <button mat-raised-button color="warn" class="mat-raised-button" (click)="onOptionSelected(jeu_1.option3)">{{ jeu_1.option3 }}</button>
+          <button mat-raised-button color="warn" class="mat-raised-button" class="gameButtons1" (click)="onOptionSelected(jeu_1.option1)">{{ jeu_1.option1 }}</button>
+          <button mat-raised-button color="warn" class="mat-raised-button" class="gameButtons2" (click)="onOptionSelected(jeu_1.option2)">{{ jeu_1.option2 }}</button>
+          <button mat-raised-button color="warn" class="mat-raised-button" class="gameButtons3" (click)="onOptionSelected(jeu_1.option3)">{{ jeu_1.option3 }}</button>
           <epf-reponse [nb_jeu]="1" [optionChoisi]=choisie [index]="jeu_1.id" (response)="onResponse($event)"></epf-reponse>
         </div>
         <div class="response-box">
           <h5>Vous avez choisi le mot : {{choisie}}</h5>
+          <h4 *ngIf="responseBack">{{responseBack.check}}</h4>
         </div>
-        <h4 *ngIf="responseBack">{{responseBack.check}}</h4>
-        <button mat-raised-button color="warn" class="mat-raised-button" (click)="redirectToNextPage()">{{valeurBouton}}</button>
+        <div class="submitButton">
+          <button mat-raised-button color="warn" class="mat-raised-button" (click)="redirectToNextPage()">{{valeurBouton}}</button>
+        </div>
       </ng-container>
     </div>
 
   </div>
   <div class="rightSection">
     <div class="regles">
-      <h1>Règles du jeu</h1>
+      <h2>Règles du jeu</h2>
       <p>Ce jeu a pour objectif d'aider les personnes dyslexiques sur leur difficulté à reconnaître des lettres, des sons.
-        <br><br>Le but du jeu est simple : trouver le morceau manquant du mot dont l'image est affiché !</p>
+        <br><br>Le but du jeu est simple : trouver le mot correspondant à l'image !</p>
     </div>
     <div class="diff">
       <h1>Oui</h1>
