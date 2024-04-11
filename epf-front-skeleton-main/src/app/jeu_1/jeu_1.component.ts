@@ -17,6 +17,9 @@ export class Jeu_1Component {
   public option : string="";
   public id : number=0;
   public valeurBouton : string="Suivant";
+  protected responseBack: Reponse | undefined;
+  public choisie: string = "";
+
 
   constructor(private _route: ActivatedRoute) {
     let questionNumber: number = +this._route.snapshot.url.join('/').slice(6, 7);
@@ -26,10 +29,14 @@ export class Jeu_1Component {
       this.valeurBouton = "Fini";
   }
 
-  onResponse(event:Reponse){
-    this.response = event;
-    console.log(event);
+  onResponse(event: Reponse) {
+    this.responseBack = event;
   }
+
+  onOptionSelected(option: string) {
+    this.choisie = option;
+  }
+
   redirectToNextPage() {
     const currentUrl = this._route.snapshot.url.join('/');
     const nextPageUrl = this.getNextPageUrl(currentUrl);
@@ -45,5 +52,6 @@ export class Jeu_1Component {
     else
       return "";
     return currentUrl.slice(0, 6) + questionNumber.toString();
+
   }
 }

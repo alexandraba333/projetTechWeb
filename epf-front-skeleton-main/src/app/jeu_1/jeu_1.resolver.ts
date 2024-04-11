@@ -15,4 +15,5 @@ export class Jeu_1Resolver implements Resolve<Jeu_1> {
     const id = parseInt(<string>route.paramMap.get("id"));
     return this.jeu_1Service.afficherQuestion(id);
   }
+
 }

@@ -2,14 +2,17 @@
   <div class = "leftSection">
     <h1><br>Premier jeu : I-Mot<br></h1>
     <ng-container *ngIf="(jeu_1$ | async) as jeu_1">
-      <img src="{{ jeu_1.image }}" alt="Premier niveau" height=200 width=300>
+      <br><br><img src="{{ jeu_1.image }}" alt="Premier niveau" height=200 width=300>
       <div><br><br>
-        <button class="button">{{ jeu_1.option1 }}</button>
-        <button class="button">{{ jeu_1.option2 }}</button>
-        <button class="button">{{ jeu_1.option3 }}</button>
+        <button class="button" (click)="onOptionSelected(jeu_1.option1)">{{ jeu_1.option1 }}</button>
+        <button class="button" (click)="onOptionSelected(jeu_1.option2)">{{ jeu_1.option2 }}</button>
+        <button class="button" (click)="onOptionSelected(jeu_1.option3)">{{ jeu_1.option3 }}</button>
       </div>
-      <epf-reponse [nb_jeu]="1" [optionChoisi]="jeu_1.option3" [index]="jeu_1.id" (response)="onResponse($event)" ></epf-reponse>
-      <p *ngIf="response"> {{response.check}}</p>
+      <epf-reponse [nb_jeu]="1" [optionChoisi]=choisie [index]="jeu_1.id" (response)="onResponse($event)"></epf-reponse>
+      <br><br><div class="response-box">
+        <h5>Vous avez choisi le mot : {{choisie}}</h5>
+      </div>
+      <h4 *ngIf="responseBack"> {{responseBack.check}}</h4>
       <button class="button" (click)="redirectToNextPage()">{{valeurBouton}}</button>
     </ng-container>
   </div>

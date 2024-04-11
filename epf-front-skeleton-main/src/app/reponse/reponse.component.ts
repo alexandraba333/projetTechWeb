@@ -1,21 +1,18 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core"
 import { Jeu_1Service } from "../services/jeu_1.service"
 import { Reponse } from "../models/reponse.model"
-import { Observable } from "rxjs"
-import { Subject } from "rxjs"
 
 @Component({
   selector: 'epf-reponse',
   templateUrl: './reponse.component.html',
   styleUrls: ['./reponse.component.scss']
 })
-export class ReponseComponent implements OnInit {
+export class ReponseComponent {
 
   @Input("nb_jeu")
   public nb_Jeu: number=1;
 
-  @Input("optionChoisi")
-  public optionChoisi: string="";
+  private _optionChoisi: string="";
 
   @Input("index")
   public index: number=1;
@@ -26,10 +23,16 @@ export class ReponseComponent implements OnInit {
 
   constructor(private jeu_1Service: Jeu_1Service) { }
 
-  ngOnInit(): void {
-    this.jeu_1Service.verifierReponse(this.optionChoisi, this.index).subscribe(
+
+  get optionChoisi(): string {
+    return this._optionChoisi
+  }
+
+  @Input()
+  set optionChoisi(value: string) {
+    this._optionChoisi = value
+    this.jeu_1Service.verifierReponse(this._optionChoisi, this.index).subscribe(
       response => this.response.emit(response)
     );
   }
-
 }
