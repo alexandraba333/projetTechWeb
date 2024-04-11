@@ -4,9 +4,9 @@
     <ng-container *ngIf="(jeu_5$ | async) as jeu_5">
       <br><br><p>{{ jeu_5.question }} </p>
       <div><br><br>
-        <button class="button" (click)="onOptionSelected(jeu_5.option1)">{{ jeu_5.option1 }}</button>
-        <button class="button" (click)="onOptionSelected(jeu_5.option2)">{{ jeu_5.option2 }}</button>
-        <button class="button" (click)="onOptionSelected(jeu_5.option3)">{{ jeu_5.option3 }}</button>
+        <button class="button" (click)="onOptionSelected(jeu_5.option1)" [disabled]="validationEffectuee">{{ jeu_5.option1 }}</button>
+        <button class="button" (click)="onOptionSelected(jeu_5.option2)" [disabled]="validationEffectuee">{{ jeu_5.option2 }}</button>
+        <button class="button" (click)="onOptionSelected(jeu_5.option3)" [disabled]="validationEffectuee">{{ jeu_5.option3 }}</button>
       </div>
       <epf-reponse [nb_jeu]="5" [optionChoisi]=choisie [index]="jeu_5.id" (response)="onResponse($event)"></epf-reponse>
       <br><br><div class="response-box">

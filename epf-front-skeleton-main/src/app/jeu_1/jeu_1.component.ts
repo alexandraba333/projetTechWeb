@@ -20,6 +20,7 @@ export class Jeu_1Component {
   protected responseBack: Reponse | undefined;
   public choisie: string = "";
   public valider: string = "";
+  public validationEffectuee : boolean = false;
 
 
   constructor(private _route: ActivatedRoute) {
@@ -56,10 +57,12 @@ export class Jeu_1Component {
   }
 
   Validation(): void {
+    let bonne_rep=0;
+    this.validationEffectuee = true;
     if (this.responseBack?.check == true)
     {
       this.valider="bravo c'est bon";
-
+      bonne_rep++;
     }
     else
       this.valider = "c'est pas bon";
