@@ -9,10 +9,7 @@ const routes: Routes = [
   { path: "", component: HomeComponent },
   {
     path: "jeu_1/:id",
-    component: Jeu_1Component,
-    resolve: {
-      jeu_1: Jeu_1Resolver,
-    },
+    component: Jeu_1Component
   },
   {
     path: "bibliotheque",
