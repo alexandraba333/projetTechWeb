@@ -16,12 +16,34 @@ export class Jeu_1Component {
   protected response:Reponse | undefined;
   public option : string="";
   public id : number=0;
+  public valeurBouton : string="Suivant";
 
   constructor(private _route: ActivatedRoute) {
+    let questionNumber: number = +this._route.snapshot.url.join('/').slice(6, 7);
+    if(questionNumber != 5)
+      this.valeurBouton = "Suivant";
+    else
+      this.valeurBouton = "Fini";
   }
 
   onResponse(event:Reponse){
     this.response = event;
-    console.log(event)
+    console.log(event);
+  }
+  redirectToNextPage() {
+    const currentUrl = this._route.snapshot.url.join('/');
+    const nextPageUrl = this.getNextPageUrl(currentUrl);
+    window.location.href = nextPageUrl;
+  }
+
+
+
+  getNextPageUrl(currentUrl: string): string {
+    let questionNumber: number = +currentUrl.slice(6, 7);
+    if(questionNumber != 5)
+      questionNumber++;
+    else
+      return "";
+    return currentUrl.slice(0, 6) + questionNumber.toString();
   }
 }
