@@ -13,15 +13,16 @@ import { Jeu_1Service } from "services/jeu_1.service"
 export class Jeu_1Component {
   jeu_1$: Observable<Jeu_1> = this._route.data.pipe(map((data) => data["jeu_1"]))
 
-  protected response:Reponse | undefined;
-  public option : string="";
-  public id : number=0;
+  protected responseBack: Reponse | undefined;
+  public choisie: string = "";
 
-  constructor(private _route: ActivatedRoute) {
+  constructor(private _route: ActivatedRoute) {}
+
+  onResponse(event: Reponse) {
+    this.responseBack = event;
   }
 
-  onResponse(event:Reponse){
-    this.response = event;
-    console.log(event)
+  onOptionSelected(option: string) {
+    this.choisie = option;
   }
 }
