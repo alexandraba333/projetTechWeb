@@ -17,7 +17,10 @@ const routes: Routes = [
   { path: "", component: HomeComponent },
   {
     path: "jeu_1/:id",
-    component: Jeu_1Component
+    component: Jeu_1Component,
+    resolve: {
+      jeu_1: Jeu_1Resolver,
+    },
   },
   {
     path: "jeu_2/:id",

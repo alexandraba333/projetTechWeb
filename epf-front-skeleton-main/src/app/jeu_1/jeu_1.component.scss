@@ -1,7 +1,4 @@
-div{
-  text-align: center;
-}
-.main{
+.main {
   margin-left: 5%;
   margin-right: 5%;
   margin-inside: 30px;
@@ -15,6 +12,39 @@ div{
   padding-bottom: 10%;
   background-color: #FCF5EE;
 }
+
+.gameBody{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Roboto Slab" !important;
+  font-size: 35px;
+}
+.mat-raised-button {
+  background-color: rgba(199, 72, 72, 1);
+  width: 100px;
+  height: 35px;
+  font-size: 120%;
+  color: #FCF5EE  !important; /* Changer la couleur de la police en blanc */
+  box-shadow: 3px 3px 13px 0px rgba(0, 0, 0, 0.35);
+}
+.gameButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10px;
+}
+
+.gameButtons > button {
+  margin-left: 10px;
+}
+
 
 .leftSection {
   margin-top: 4%;
@@ -39,32 +69,11 @@ h1{
   background-color: rgba(160, 214, 140, 0.75);
 }
 
-.button {
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  color: #333;
-  border-radius: 5px;
-}
-
-.button:hover {
-  background-color: #e0e0e0;
-}
 
 h4{
   color: transparent;
 }
-h5{
-  color: #111; font-family: 'Helvetica Neue', sans-serif; font-size: 30px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
-}
+
 .response-box {
-  background-color: #f0f0f0;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 20px;
-  display: inline-block;
+  margin-top: 10px;
 }
