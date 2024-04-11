@@ -6,14 +6,13 @@
         <source src="{{ jeu_3.question }}" type="audio/mpeg">
       </audio>
       <div><br><br>
-        <input type="text" [(ngModel)]="choisie" placeholder="Saisissez votre réponse ici...">
+        <input type="text" [(ngModel)]="choisie" placeholder="Saisissez votre réponse ici..." [disabled]="validationEffectuee">
       </div>
       <epf-reponse [nb_jeu]="3" [optionChoisi]=choisie [index]="jeu_3.id" (response)="onResponse($event)"></epf-reponse>
       <br><br><div class="response-box">
         <h5>Vous avez choisi le mot : {{choisie}}</h5>
       </div>
       <div><button class="button" (click)="Validation()">Valider</button></div>
-
       <h4 *ngIf="responseBack"> {{valider}}</h4>
       <button class="button" (click)="redirectToNextPage()">{{valeurBouton}}</button>
     </ng-container>

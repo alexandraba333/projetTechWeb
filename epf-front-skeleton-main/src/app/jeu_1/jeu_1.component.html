@@ -6,12 +6,12 @@
     <div class="gameBody">
       <ng-container *ngIf="(jeu_1$ | async) as jeu_1">
         <div class="gameImage">
-          <img src="{{ jeu_1.image }}" alt="Premier niveau" height=200 width=300>
+          <img src="{{ jeu_1.image }}" alt="Premier niveau">
         </div>
         <div class="gameButtons"><br><br>
-          <button mat-raised-button color="warn" class="mat-raised-button" (click)="onOptionSelected(jeu_1.option1)">{{ jeu_1.option1 }}</button>
-          <button mat-raised-button color="warn" class="mat-raised-button" (click)="onOptionSelected(jeu_1.option2)">{{ jeu_1.option2 }}</button>
-          <button mat-raised-button color="warn" class="mat-raised-button" (click)="onOptionSelected(jeu_1.option3)">{{ jeu_1.option3 }}</button>
+          <button mat-raised-button color="warn" class="mat-raised-button" class="gameButtons1" (click)="onOptionSelected(jeu_1.option1)">{{ jeu_1.option1 }}</button>
+          <button mat-raised-button color="warn" class="mat-raised-button" class="gameButtons2" (click)="onOptionSelected(jeu_1.option2)">{{ jeu_1.option2 }}</button>
+          <button mat-raised-button color="warn" class="mat-raised-button" class="gameButtons3" (click)="onOptionSelected(jeu_1.option3)">{{ jeu_1.option3 }}</button>
           <epf-reponse [nb_jeu]="1" [optionChoisi]=choisie [index]="jeu_1.id" (response)="onResponse($event)"></epf-reponse>
         </div>
         <div class="response-box">
@@ -19,7 +19,9 @@
         </div>
         <div><button class="button" (click)="Validation()">Valider</button></div>
         <h4 *ngIf="responseBack">{{valider}}</h4>
-        <button mat-raised-button color="warn" class="mat-raised-button" (click)="redirectToNextPage()">{{valeurBouton}}</button>
+        <div class="submitButton">
+          <button mat-raised-button color="warn" class="mat-raised-button" (click)="redirectToNextPage()">{{valeurBouton}}</button>
+        </div>
       </ng-container>
     </div>
 
