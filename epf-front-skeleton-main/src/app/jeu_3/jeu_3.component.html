@@ -12,7 +12,9 @@
       <br><br><div class="response-box">
         <h5>Vous avez choisi le mot : {{choisie}}</h5>
       </div>
-      <h4 *ngIf="responseBack"> {{responseBack.check}}</h4>
+      <div><button class="button" (click)="Validation()">Valider</button></div>
+
+      <h4 *ngIf="responseBack"> {{valider}}</h4>
       <button class="button" (click)="redirectToNextPage()">{{valeurBouton}}</button>
     </ng-container>
   </div>
