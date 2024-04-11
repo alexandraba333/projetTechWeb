@@ -32,15 +32,15 @@ INSERT INTO public.jeu_3 (id, question, reponse)
 VALUES (5, 'epf-front-skeleton-main/audio/typique.mp3', 'typique');
 
 INSERT INTO public.jeu_5 (id, question, option_1, option_2, option_3, reponse)
-VALUES (1, 'chat', 'eau', 'au', 'o', 'chateau');
+VALUES (1, 'chat_', 'eau', 'au', 'o', 'chateau');
 INSERT INTO public.jeu_5 (id, question, option_1, option_2, option_3, reponse)
-VALUES (2, 'styl', 'o', 'eau', 'au', 'stylo');
+VALUES (2, 'styl_', 'o', 'eau', 'au', 'stylo');
 INSERT INTO public.jeu_5 (id, question, option_1, option_2, option_3, reponse)
 VALUES (3, 'boi_on', 'ch', 's', 'ss', 'boisson');
 INSERT INTO public.jeu_5 (id, question, option_1, option_2, option_3, reponse)
-VALUES (4, 'ch', 'ent', 'ean', 'ant', 'chant');
+VALUES (4, 'ch_', 'ent', 'ean', 'ant', 'chant');
 INSERT INTO public.jeu_5 (id, question, option_1, option_2, option_3, reponse)
-VALUES (5, 'informati', 'om', 'on', 'an', 'information');
+VALUES (5, 'informati_', 'om', 'on', 'an', 'information');
 
 INSERT INTO public.jeu_4 (id, question, reponse, image)
 VALUES (1, 'seic', 'scie', 'assets/scie.jpg');
