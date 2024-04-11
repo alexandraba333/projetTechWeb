@@ -14,12 +14,14 @@ import { FooterComponent } from './footer/footer.component'
 import { MatChipsModule } from "@angular/material/chips"
 import { Jeu_1Component } from "./jeu_1/jeu_1.component"
 import { ReponseComponent } from "./reponse/reponse.component"
+import { BibliothequeComponent } from "./bibliotheque/bibliotheque.component"
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
+    BibliothequeComponent,
     FooterComponent,
     Jeu_1Component,
     ReponseComponent

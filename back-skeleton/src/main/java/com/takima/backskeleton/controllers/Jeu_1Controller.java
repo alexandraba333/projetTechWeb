@@ -6,7 +6,7 @@ import com.takima.backskeleton.services.Jeu_1Service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("jeu_1")
 @RestController
 @RequiredArgsConstructor
