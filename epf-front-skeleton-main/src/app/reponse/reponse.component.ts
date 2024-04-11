@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core"
 import { Jeu_1Service } from "../services/jeu_1.service"
 import { Jeu_2Service } from "../services/jeu_2.service"
+import { Jeu_3Service } from "../services/jeu_3.service"
 import { Jeu_4Service } from "../services/jeu_4.service"
 import { Jeu_5Service } from "../services/jeu_5.service"
 import { Reponse } from "../models/reponse.model"
@@ -24,7 +25,7 @@ export class ReponseComponent {
   public response: EventEmitter<Reponse> = new EventEmitter<Reponse>();
 
 
-  constructor(private jeu_1Service: Jeu_1Service, private jeu_2Service: Jeu_2Service, private jeu_4Service: Jeu_4Service, private jeu_5Service: Jeu_5Service) { }
+  constructor(private jeu_1Service: Jeu_1Service, private jeu_2Service: Jeu_2Service, private jeu_3Service: Jeu_3Service, private jeu_4Service: Jeu_4Service, private jeu_5Service: Jeu_5Service) { }
 
 
   get optionChoisi(): string {
@@ -43,6 +44,11 @@ export class ReponseComponent {
         break;
       case 2:
         this.jeu_2Service.verifierReponse(this._optionChoisi, this.index).subscribe(
+          response => this.response.emit(response)
+        );
+        break;
+      case 3:
+        this.jeu_3Service.verifierReponse(this._optionChoisi, this.index).subscribe(
           response => this.response.emit(response)
         );
         break;
