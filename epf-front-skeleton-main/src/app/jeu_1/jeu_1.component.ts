@@ -19,6 +19,7 @@ export class Jeu_1Component {
   public valeurBouton: string = "Suivant";
   protected responseBack: Reponse | undefined;
   public choisie: string = "";
+  public valider: string = "";
 
 
   constructor(private _route: ActivatedRoute) {
@@ -52,5 +53,15 @@ export class Jeu_1Component {
       return "";
     return currentUrl.slice(0, 6) + questionNumber.toString();
 
+  }
+
+  Validation(): void {
+    if (this.responseBack?.check == true)
+    {
+      this.valider="bravo c'est bon";
+
+    }
+    else
+      this.valider = "c'est pas bon";
   }
 }
