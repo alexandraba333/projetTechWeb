@@ -8,7 +8,9 @@
         <p>Clique sur le bouton ci-dessous pour commencer ton entrainement :</p>
       </div>
       <div class="buttonSection">
-        <button mat-raised-button color="warn" class="mat-raised-button">Commencer</button>
+        <a routerLink="bibliotheque">
+          <button mat-raised-button color="warn" class="mat-raised-button">Commencer</button>
+        </a>
       </div>
     </div>
 
@@ -36,18 +38,22 @@
           <div class="gameTitle">
             <h1>Jeu 2</h1>
           </div>
-          <div class="overlay">
-            <div class="text">Règles du jeu</div>
-          </div>
+          <a routerLink="/jeu_2/1">
+            <div class="overlay">
+              <div class="text">Trouve le morceau manquant du mot !</div>
+            </div>
+          </a>
         </div>
 
         <div class="rightGame">
           <div class="gameTitle">
             <h1>Jeu 3</h1>
           </div>
-          <div class="overlay">
-            <div class="text">Règles du jeu</div>
-          </div>
+          <a routerLink="/jeu_3/1">
+            <div class="overlay">
+              <div class="text">Trouve le mot correspondant à l'audio !</div>
+            </div>
+          </a>
         </div>
 
       </div>

@@ -61,10 +61,10 @@ export class Jeu_5Component {
     this.validationEffectuee = true;
     if (this.responseBack?.check == true)
     {
-      this.valider="bravo c'est bon";
+      this.valider="Bravo ! C'est la bonne réponse.";
       bonne_rep++;
     }
     else
-      this.valider = "c'est pas bon";
+      this.valider = "Ce n'est pas la bonne réponse. Tu as une autre chance.";
   }
 }

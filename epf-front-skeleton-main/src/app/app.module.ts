@@ -19,6 +19,7 @@ import { Jeu_4Component } from "./jeu_4/jeu_4.component"
 import { Jeu_5Component } from "./jeu_5/jeu_5.component"
 import { ReponseComponent } from "./reponse/reponse.component"
 import { BibliothequeComponent } from "./bibliotheque/bibliotheque.component"
+import { MatInputModule } from "@angular/material/input"
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { BibliothequeComponent } from "./bibliotheque/bibliotheque.component"
     MatButtonModule,
     HttpClientModule,
     MatChipsModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
