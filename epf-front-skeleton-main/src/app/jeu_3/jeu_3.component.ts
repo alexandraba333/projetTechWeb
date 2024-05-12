@@ -65,7 +65,7 @@ export class Jeu_3Component {
       bonne_rep++;
     }
     else
-      this.valider = "Ce n'est pas la bonne réponse. Tu as une autre chance.";
+      this.valider = "Ce n'est pas la bonne réponse.";
   }
 }
 

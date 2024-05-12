@@ -7,6 +7,7 @@
 3. Fait un `docker-compose up`
 4. Rajoute le pluggin : https://plugins.jetbrains.com/plugin/7861-envfile
 5. Exécuter les scripts SQL qui se trouvent dans back-skeleton\initdb\
+6. Le nom de la base de données est test, le user et le mot de passe sont 'root'.
 
 ## Pour lancer le projet
 
